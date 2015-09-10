@@ -42,7 +42,7 @@ function createIcon(name, options) {
     }
   }
 
-  el.className = options.className || 'icon-' + name;
+  el.className = options.className || 'editor-icon-' + name;
   return el;
 }
 
@@ -94,7 +94,7 @@ function toggleFullScreen(editor) {
 
   // https://developer.mozilla.org/en-US/docs/DOM/Using_fullscreen_mode
   var doc = document;
-  var isFull = doc.fullScreen || doc.mozFullScreen || doc.webkitFullScreen;
+  var isFull = doc.fullScreen || doc.mozFullScreen || doc.webkitIsFullScreen;
   var request = function() {
     if (el.requestFullScreen) {
       el.requestFullScreen();
